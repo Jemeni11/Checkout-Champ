@@ -1,9 +1,39 @@
-# ReactViteTS (Vite + React + TypeScript + TailwindCSS + Prettier + ESLint)
+# Frontend Mentor - Product list with cart solution
 
-## Introduction
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Hey!
-This is a vite template with the following installed:
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+### Links
+
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/checkout-champ-baiSkFTsu9)
+- Live Site URL: [Vercel](https://checkout-champ.vercel.app/)
+
+## My process
+
+### Built with
 
 - [Vite 5.4.1](https://vitejs.dev/)
 - [React 18.3.1](https://react.dev/)
@@ -12,90 +42,24 @@ This is a vite template with the following installed:
 - [Prettier 3.3.3](https://prettier.io/)
 - [prettier-plugin-tailwind 0.6.6](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 - [ESLint 9.9.0](https://eslint.org/)
+- [Jotai 2.10.0](https://jotai.org/)
 
-## Installation
+### What I learned
 
-You can either:
+I used this project to learn jotai. It was fun and easy to use. 10/10 would recommend.
 
-- Clone the repo and run `pnpm install` in the root directory
+To see how you can add code snippets, see below:
 
-  Bash:
-  
-  ```bash
-  git clone https://github.com/Jemeni11/ReactViteTS.git && cd ReactViteTS && pnpm install
-  ```
+### Continued development
 
-  Powershell:
-  
-  ```powershell
-  git clone https://github.com/Jemeni11/ReactViteTS.git; cd ReactViteTS; pnpm install
-  ```
+TBC
+maybe I could use the payment api???
 
-  <br/>
-  <br/>
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
 
-- Or click on the `use this template` button and pick whatever option you prefer
+## Author
 
-  <br/>
-  <br/>
-
-  <img width="945" alt="Screenshot of this repo's github page" src="https://github.com/user-attachments/assets/bc779b76-8c38-451f-91f3-6712ebff2860">
-
-## Wait a minute, who are you?
-
-Hello there! I'm Emmanuel Jemeni, and I work as a Frontend Developer. You can find me on various platforms:
-
-- [LinkedIn](https://www.linkedin.com/in/emmanuel-jemeni)
-- [GitHub](https://github.com/Jemeni11)
-- [Twitter/X](https://twitter.com/Jemeni11_)
-
-## Vite-Specific Information
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-### Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+- GitHub - [Emmanuel Jemeni](https://github.com/Jemeni11)
+- Frontend Mentor - [@Jemeni11](https://www.frontendmentor.io/profile/Jemeni11)
+- Twitter - [@Jemeni11\_](https://www.twitter.com/jemeni11_)
