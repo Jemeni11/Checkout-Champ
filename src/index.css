@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Red Hat Text";
+  font-weight: 400 700;
+  font-display: swap;
+  font-style: normal;
+  src: url("../public/fonts/RedHatText-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+:root {
+  --css-red: hsl(14, 86%, 42%);
+  --css-green: hsl(159, 69%, 38%);
+  --css-rose-50: hsl(20, 50%, 98%);
+  --css-rose-100: hsl(13, 31%, 94%);
+  --css-rose-300: hsl(14, 25%, 72%);
+  --css-rose-400: hsl(7, 20%, 60%);
+  --css-rose-500: hsl(12, 20%, 44%);
+  --css-rose-900: hsl(14, 65%, 9%);
+
+  font-family: "Red Hat Text", system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: var(--css-rose-900);
+  background-color: hsl(26, 54%, 97%);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
