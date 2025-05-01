@@ -9,4 +9,5 @@ export interface Meal {
     tablet: string;
     desktop: string;
   };
+  index?: number;
 }
