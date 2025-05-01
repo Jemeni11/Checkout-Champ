@@ -23,23 +23,27 @@ function MealItem({ quantity, name, category, price, image }: Meal) {
   };
 
   return (
-    <div>
+    <div className="aspect-[502/480]">
       <picture>
+        <source
+          media="(min-width: 1024px)"
+          sizes="100%"
+          srcSet={image?.desktop}
+        />
         <source
           media="(min-width: 768px)"
           sizes="100%"
-          srcSet={image?.desktop}
+          srcSet={image?.tablet}
         />
         <source
           media="(min-width: 320px)"
           sizes="100%"
           srcSet={image?.mobile}
         />
-        {/* <img src={image?.mobile} alt={name} className="mb-6 rounded-lg" /> */}
         <img
           src={image?.mobile}
           alt={name}
-          className={`${quantity > 0 ? "outline outline-2 outline-red sm:outline-none" : ""} mb-6 rounded-lg bg-rose-300`}
+          className={`mb-6 rounded-lg bg-rose-300 object-cover ${quantity > 0 ? "outline outline-2 outline-red sm:outline-none" : ""}`}
         />
       </picture>
       <div className="relative mb-6 w-full">
@@ -50,7 +54,12 @@ function MealItem({ quantity, name, category, price, image }: Meal) {
               onClick={() => handleCartItemChange("+")}
               className="flex w-full items-center justify-center gap-x-2 rounded-full border border-solid border-rose-300 bg-white px-6 py-2 text-center hover:border-red"
             >
-              <img src="/images/icon-add-to-cart.svg" alt="Add to Cart" />
+              <img
+                src="/images/icon-add-to-cart.svg"
+                alt="Add to Cart"
+                width={21}
+                height={20}
+              />
               <span className="hover:text-red">Add to Cart</span>
             </button>
           ) : (
