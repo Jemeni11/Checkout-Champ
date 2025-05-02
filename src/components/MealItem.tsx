@@ -43,7 +43,7 @@ function MealItem({ quantity, name, category, price, image, index }: Meal) {
         <img
           src={image?.mobile}
           alt={name}
-          className={`mb-6 rounded-lg bg-rose-300 object-cover ${quantity > 0 ? "outline outline-2 outline-red sm:outline-none" : ""}`}
+          className={`mb-6 rounded-lg bg-rose-300 object-cover ${quantity > 0 ? "outline-red outline-2 sm:outline-none" : ""}`}
           loading={Number(index) < 3 ? "eager" : "lazy"}
         />
       </picture>
@@ -53,7 +53,7 @@ function MealItem({ quantity, name, category, price, image, index }: Meal) {
             <button
               type="button"
               onClick={() => handleCartItemChange("+")}
-              className="flex w-full items-center justify-center gap-x-2 rounded-full border border-solid border-rose-300 bg-white px-6 py-2 text-center hover:border-red"
+              className="hover:border-red flex w-full items-center justify-center gap-x-2 rounded-full border border-solid border-rose-300 bg-white px-6 py-2 text-center"
             >
               <img
                 src="/images/icon-add-to-cart.svg"
@@ -64,7 +64,7 @@ function MealItem({ quantity, name, category, price, image, index }: Meal) {
               <span className="hover:text-red">Add to Cart</span>
             </button>
           ) : (
-            <div className="flex items-center justify-between rounded-full bg-red px-4 py-2 text-white">
+            <div className="bg-red flex items-center justify-between rounded-full px-4 py-2 text-white">
               <QuantityModifierButton
                 handlerFunction={handleCartItemChange}
                 operation="-"
@@ -80,7 +80,7 @@ function MealItem({ quantity, name, category, price, image, index }: Meal) {
       </div>
       <span className="text-xs text-rose-400">{category}</span>
       <p className="text-base font-semibold text-rose-900">{name}</p>
-      <span className="font-medium text-red">{formattedPrice}</span>
+      <span className="text-red font-medium">{formattedPrice}</span>
     </div>
   );
 }
@@ -98,7 +98,7 @@ function QuantityModifierButton({
     <button
       type="button"
       onClick={() => handlerFunction(operation)}
-      className="aspect-square rounded-[50%] border border-white p-1 text-white hover:bg-white hover:text-red"
+      className="hover:text-red aspect-square rounded-[50%] border border-white p-1 text-white hover:bg-white"
     >
       {operation === "+" ? (
         <svg

@@ -23,7 +23,7 @@ export default function Cart() {
 
   return (
     <aside className="h-fit rounded-2xl bg-white px-8 py-10">
-      <h2 className="text-2xl font-semibold text-red">
+      <h2 className="text-red text-2xl font-semibold">
         Your Cart ({pickedMealsLength})
       </h2>
       {pickedMealsLength > 0 ? (
@@ -111,7 +111,7 @@ function CartContent({
       </div>
       <button
         type="submit"
-        className="mt-4 w-full rounded-full bg-red py-3 text-center text-white"
+        className="bg-red mt-4 w-full rounded-full py-3 text-center text-white"
       >
         Confirm Order
       </button>
@@ -125,7 +125,7 @@ function EmptyCart() {
       <img
         src="/images/illustration-empty-cart.svg"
         alt="Empty Cart"
-        className="mx-auto mb-6 mt-14"
+        className="mx-auto mt-14 mb-6"
       />
       <figcaption className="w-full text-center">
         Your added items will appear here
