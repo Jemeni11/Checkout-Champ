@@ -2,7 +2,7 @@ import { Meal } from "../types";
 import { useSetAtom } from "jotai";
 import cartAtom from "../store";
 
-function MealItem({ quantity, name, category, price, image }: Meal) {
+function MealItem({ quantity, name, category, price, image, index }: Meal) {
   const setCart = useSetAtom(cartAtom);
   const formattedPrice = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -44,6 +44,7 @@ function MealItem({ quantity, name, category, price, image }: Meal) {
           src={image?.mobile}
           alt={name}
           className={`mb-6 rounded-lg bg-rose-300 object-cover ${quantity > 0 ? "outline outline-2 outline-red sm:outline-none" : ""}`}
+          loading={Number(index) < 3 ? "eager" : "lazy"}
         />
       </picture>
       <div className="relative mb-6 w-full">
@@ -56,7 +57,7 @@ function MealItem({ quantity, name, category, price, image }: Meal) {
             >
               <img
                 src="/images/icon-add-to-cart.svg"
-                alt="Add to Cart"
+                alt="Cart icon"
                 width={21}
                 height={20}
               />
