@@ -2,7 +2,7 @@ import { Meal } from "../types";
 import { useSetAtom } from "jotai";
 import cartAtom from "../store";
 
-function MealItem({ quantity, name, category, price, image, index }: Meal) {
+export default function MealItem({ quantity, name, category, price, image, index }: Meal) {
   const setCart = useSetAtom(cartAtom);
   const formattedPrice = new Intl.NumberFormat("en-US", {
     style: "currency",
@@ -84,8 +84,6 @@ function MealItem({ quantity, name, category, price, image, index }: Meal) {
     </div>
   );
 }
-
-export default MealItem;
 
 function QuantityModifierButton({
   handlerFunction,
